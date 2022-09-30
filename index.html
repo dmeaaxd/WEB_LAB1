@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Лабораторная работа №1</title>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="js/draw_table.js"></script>
+</head>
+<body>
+<section>
+    <h1>ИТМО</h1>
+    <h1>ИТМО</h1>
+</section>
+
+<div id="content">
+    <div id="description">
+        Ушаков Максим Евгеньевич P32141 Вариант 1317
+    </div>
+    <div id="graph_div">
+        <canvas class="graph" id="canvas" class="tooltip" width="300px" height="300px"></canvas>
+        <label id="R_ox">R</label>
+        <label id="R2_ox">R/2</label>
+        <label id="-R2_ox">-R/2</label>
+        <label id="-R_ox">-R</label>
+        <label id="R_oy">R</label>
+        <label id="R2_oy">R/2</label>
+        <label id="-R2_oy">-R/2</label>
+        <label id="-R_oy">-R</label>
+    </div>
+    <div id="coordinates">
+        <form id="form">
+            <label>X</label>
+            <input required name="x" id="x1" type="radio" value="-4"><label for="x1">-4</label>
+            <input required name="x" id="x2" type="radio" value="-3"><label for="x2">-3</label>
+            <input required name="x" id="x3" type="radio" value="-2"><label for="x3">-2</label>
+            <input required name="x" id="x4" type="radio" value="-1"><label for="x4">-1</label>
+            <input required name="x" id="x5" type="radio" value="0"> <label for="x5"> 0</label>
+            <input required name="x" id="x6" type="radio" value="1"> <label for="x6"> 1</label>
+            <input required name="x" id="x7" type="radio" value="2"> <label for="x7"> 2</label>
+            <input required name="x" id="x8" type="radio" value="3"> <label for="x8"> 3</label>
+            <input required name="x" id="x9" type="radio" value="4"> <label for="x9"> 4</label>
+
+            <br><br>
+
+            <label>Y</label>
+            <input style="width: 100px" type="number" required="" id="y" name="y" min="-3" max="5" placeholder="-3...5">
+            <br><br>
+            <label>R</label>
+            <select required id="r" name="r">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <br><br>
+
+            <div id="bottoms">
+                <input align="left" type="submit" name="button" id="button" value="send">
+                <input align="right" type="reset" name="clear" id="clear" value="reset" onclick="clear_table()">
+            </div>
+        </form>
+    </div>
+    <div id="table_div">
+        <table id="table" align="center" bordebacr="1">
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Результат</th>
+                <th>Время работы</th>
+                <th>Время запуска</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<label id="o"></label>
+<script src="js/draw_function.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
